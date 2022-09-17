@@ -1,0 +1,116 @@
+* {
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 450px;
+    position: fixed;
+    top: -50%;
+    left: calc(50% - 225px);
+    transition: top .2s linear;
+    -webkit-transition: top .2s linear;
+    -moz-transition: top .2s linear;
+    -ms-transition: top .2s linear;
+    -o-transition: top .2s linear;
+
+    z-index: 999;
+}
+
+.modal.active {
+    top: 15%;
+}
+
+.modal .header {
+    background-color: #666;
+    font-size: 1.5rem;
+    padding: .5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal input[type = "text"] {
+    width: 100%;
+    background-color: #999;
+    padding: .8rem;
+    font-size: 1.2rem;
+}
+
+.modal input[type = "submit"] {
+    width: 100%;
+    padding: .8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.modal .header .close {
+    cursor: pointer;
+    font-size: 2.2rem;
+}
+
+.container {
+    display: flex;
+    height: 80vh;
+    width: 1000px;
+}
+
+.status {
+    background-color: #bdbdbd;
+    margin: .1rem;
+    flex: 1;
+}
+
+.status:nth-child(odd) {
+    background-color: rgb(172, 172, 172);
+}
+
+.status h2 {
+    background: #999;
+    padding: .5rem;
+}
+
+.add_btn {
+    background: #333;
+    font-size: 1rem;
+    padding: .5rem;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+
+.todo {
+    background-color: gray;
+    margin: .1rem 0;
+    padding: .3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+}
+
+.todo .close {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.fall {
+    opacity: .5;
+    transform: scale(.7);
+    transform: translateY(2rem);
+    -webkit-transform: scale(.7);
+    -moz-transform: scale(.7);
+    -ms-transform: scale(.7);
+    -o-transform: scale(.7);
+}
